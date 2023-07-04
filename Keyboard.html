@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.25">
+    <title>KeyBoard</title>
+    <link rel="stylesheet" href="./Keyboard.css">
+</head>
+<body>
+    <div class="cont">
+        <div class="disp-cont">
+            <textarea cols="30" rows="10" class="txtarea" readonly></textarea>
+        </div>
+        <div class="key-cont">
+            <div class="left">
+                <div class="l-r1">
+                    <div class="r1c" onclick="fun('esc')">esc</div>
+                    <div class="r1c" onclick="fun('f1')">f1</div>
+                    <div class="r1c" onclick="fun('f2')">f2</div>
+                    <div class="r1c" onclick="fun('f3')">f3</div>
+                    <div class="r1c" onclick="fun('f4')">f4</div>
+                    <div class="r1c" onclick="fun('f5')">f5</div>
+                    <div class="r1c" onclick="fun('f6')">f6</div>
+                    <div class="r1c" onclick="fun('f7')">f7</div>
+                    <div class="r1c" onclick="fun('f8')">f8</div>
+                    <div class="r1c" onclick="fun('f9')">f9</div>
+                    <div class="r1c" onclick="fun('f10')">f10</div>
+                    <div class="r1c" onclick="fun('f11')">f11</div>
+                    <div class="r1c" onclick="fun('f12')">f12</div>
+                    <div class="r1c" onclick="fun('prt')">prt</div>
+                    <div class="r1c" onclick="del()">delete</div>
+                </div>
+                <div class="l-r2">
+                    <div class="r2c1" onclick="fun('~')">~</div>
+                    <div class="r2c" onclick="fun('1')">1</div>
+                    <div class="r2c" onclick="fun('2')">2</div>
+                    <div class="r2c" onclick="fun('3')">3</div>
+                    <div class="r2c" onclick="fun('4')">4</div>
+                    <div class="r2c" onclick="fun('5')">5</div>
+                    <div class="r2c" onclick="fun('6')">6</div>
+                    <div class="r2c" onclick="fun('7')">7</div>
+                    <div class="r2c" onclick="fun('8')">8</div>
+                    <div class="r2c" onclick="fun('9')">9</div>
+                    <div class="r2c" onclick="fun('0')">0</div>
+                    <div class="r2c" onclick="fun('-')">-</div>
+                    <div class="r2c" onclick="fun('=')">=</div>
+                    <div class="r2c2" onclick="bckspc()"><i class="fa-solid fa-arrow-left"></i>backspace</div>
+                </div>
+                <div class="l-r2">
+                    <div class="r2c31" onclick="fun('   ')">tab<i class="fa-solid fa-right-left"></i></div>
+                    <div class="r2c3" onclick="fun('Q')">Q</div>
+                    <div class="r2c3" onclick="fun('W')">W</div>
+                    <div class="r2c3" onclick="fun('E')">E</div>
+                    <div class="r2c3" onclick="fun('R')">R</div>
+                    <div class="r2c3" onclick="fun('T')">T</div>
+                    <div class="r2c3" onclick="fun('Y')">Y</div>
+                    <div class="r2c3" onclick="fun('U')">U</div>
+                    <div class="r2c3" onclick="fun('I')">I</div>
+                    <div class="r2c3" onclick="fun('O')">O</div>
+                    <div class="r2c3" onclick="fun('P')">P</div>
+                    <div class="r2c3" onclick="fun('[')">[</div>
+                    <div class="r2c3" onclick="fun(']')">]</div>
+                    <div class="r2c32" onclick="fun('|')">|</div>
+                </div>
+                <div class="l-r2">
+                    <div class="r2c41" onclick="caps()">capslock<i class="fa-solid fa-circle"></i></div>
+                    <div class="r2c4" onclick="fun('A')">A</div>
+                    <div class="r2c4" onclick="fun('S')">S</div>
+                    <div class="r2c4" onclick="fun('D')">D</div>
+                    <div class="r2c4" onclick="fun('F')">F</div>
+                    <div class="r2c4" onclick="fun('G')">G</div>
+                    <div class="r2c4" onclick="fun('H')">H</div>
+                    <div class="r2c4" onclick="fun('J')">J</div>
+                    <div class="r2c4" onclick="fun('K')">K</div>
+                    <div class="r2c4" onclick="fun('L')">L</div>
+                    <div class="r2c4" onclick="fun(';')">;</div>
+                    <div class="r2c4" onclick="fun(f)">'</div>
+                    <div class="r2c42" onclick="fun('\n')"><i class="fa-solid fa-arrow-right-to-bracket"></i>enter</div>
+                </div>
+                <div class="l-r2">
+                    <div class="r2c51" onclick="fun('shift')">shift</div>
+                    <div class="r2c5" onclick="fun('Z')">Z</div>
+                    <div class="r2c5" onclick="fun('X')">X</div>
+                    <div class="r2c5" onclick="fun('C')">C</div>
+                    <div class="r2c5" onclick="fun('V')">V</div>
+                    <div class="r2c5" onclick="fun('B')">B</div>
+                    <div class="r2c5" onclick="fun('N')">N</div>
+                    <div class="r2c5" onclick="fun('M')">M</div>
+                    <div class="r2c5" onclick="fun(',')">,</div>
+                    <div class="r2c5" onclick="fun('.')">.</div>
+                    <div class="r2c5" onclick="fun('/')">/</div>
+                    <div class="r2c52" onclick="fun('pause')">pause</div>
+                </div>
+                <div class="l-r2">
+                    <div class="r2c6" onclick="fun('ctrl')">ctrl</div>
+                    <div class="r2c6" onclick="fun('fn')">fn</div>
+                    <div class="r2c6" onclick="fun('windows')"><i class="fa-brands fa-windows"></i></div>
+                    <div class="r2c6" onclick="fun('alt')">alt</div>
+                    <div class="r2c61" onclick="fun(' ')">space</div>
+                    <div class="r2c6" onclick="fun('alt')">alt</div>
+                    <div class="r2c6" onclick="fun('ctrl')">ctrl</div>
+                    <div class="r2c6" onclick="lft()"><i class="fa-solid fa-caret-left"></i></div>
+                    <div class="r2c62">
+                        <div class="r2c621" onclick="up()"><i class="fa-solid fa-caret-up"></i></div>
+                        <div class="r2c622" onclick="dwn()"><i class="fa-solid fa-caret-down"></i></div>
+                    </div>
+                    <div class="r2c6" onclick="rght()"><i class="fa-solid fa-caret-right"></i></div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="rr">
+                    <div class="rr1">
+                        <div class="rr1c" onclick="fun('home')">home</div>
+                        <div class="rr1c" onclick="fun('end')">end</div>
+                        <div class="rr1c" onclick="fun('pg up')">pg up</div>
+                    </div>
+                    <div class="rr2">
+                        <div class="rr2c1" onclick="nm()">num<br>lock</div>
+                        <div class="rr2c" onclick="fun('?')">?</div>
+                        <div class="rr2c" onclick="fun('*')">*</div>
+                    </div>
+                    <div class="rr2">
+                        <div class="rr1c" onclick="fun('7')">7</div>
+                        <div class="rr1c" onclick="fun('8')">8</div>
+                        <div class="rr1c" onclick="fun('9')">9</div>
+                    </div>
+                    <div class="rr2">
+                        <div class="rr1c" onclick="fun('4')">4</div>
+                        <div class="rr1c" onclick="fun('5')">5</div>
+                        <div class="rr1c" onclick="fun('6')">6</div>
+                    </div>
+                    <div class="rr2">
+                        <div class="rr1c" onclick="fun('1')">1</div>
+                        <div class="rr1c" onclick="fun('2')">2</div>
+                        <div class="rr1c" onclick="fun('3')">3</div>
+                    </div>
+                    <div class="rr2">
+                        <div class="rr2c21" onclick="fun('0')">0</div>
+                        <div class="rr1c" onclick="fun('.')">.</div>
+                    </div>
+                </div>
+                <div class="rl">
+                    <div class="rlc1" onclick="fun('pg dn')">pg dn</div>
+                    <div class="rlc2" onclick="fun('_')">_</div>
+                    <div class="rlc3" onclick="fun('+')">+</div>
+                    <div class="rlc3" onclick="fun('\n')">enter</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./Keyboard.js"></script>
+</body>
+</html>
